@@ -2,7 +2,9 @@
   "nav": {
     "problem": "El Problema",
     "solution": "Solución",
-    "howItWorks": "Cómo Funciona"
+    "howItWorks": "Cómo Funciona",
+    "priorityAccess": "Acceso prioritario",
+    "priorityCta": "Acceso prioritario"
   },
   "hero": {
     "badge1": "75% menos tiempo",
@@ -69,7 +71,7 @@
   },
   "finalCta": {
     "title": "La digitalización ya no es una opción. Es la clave para competir y crecer.",
-    "subtitle": "Únete a los miles de restaurantes que ya usan la automatización para ser más eficientes y rentables. Deja de perder dinero y empieza a invertir en inteligencia.",
+    "subtitle": "Únete a la lista de espera y sé el primero en enterarte del lanzamiento de nuestra plataforma.",
     "formTitle": "Únete a la lista de espera",
     "placeholder": "tu@restaurante.com",
     "buttonText": "Unirme a la revolución"
@@ -83,7 +85,7 @@
       "privacy": "Política de Privacidad",
       "terms": "Términos de Servicio"
     },
-    "copyright": "© 2024 FacturaGourmet. Todos los derechos reservados.",
+    "copyright": "Todos los derechos reservados.",
     "madeWith": "Hecho con ❤️ para restaurantes que quieren crecer."
   },
   "emailForm": {
@@ -168,7 +170,10 @@
         "processed": "Procesada",
         "processing": "Procesando",
         "error": "Error"
-      }
+      },
+      "invoiceManagement": "Gestión de Facturas",
+      "searchPlaceholder": "Buscar facturas...",
+      "filters": "Filtros"
     },
     "cta": {
       "title": "¿Listo para revolucionar tu gestión?",

@@ -1,9 +1,9 @@
 import  { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
-  BarChart3, TrendingUp, AlertTriangle, DollarSign, Clock, Camera,
-  FileText, Zap, Target, Bell, Settings, PieChart,
-  TrendingDown, CheckCircle, XCircle, ArrowRight, Search,
+  BarChart3, TrendingUp, DollarSign, Clock, Camera,
+  FileText, Zap, Bell, Settings, PieChart,
+  TrendingDown, CheckCircle, ArrowRight, Search,
   Filter, Download, Upload, Eye, Edit, Trash2, Plus,
     Phone, Star, Award
 } from 'lucide-react';
@@ -136,16 +136,6 @@ const DashboardPreview = () => {
                           <div className="flex-1">
                             <div className="text-sm font-medium text-neutral-dark dark:text-dark-text">{t('dashboardPreview.mobile.provider2')}</div>
                             <div className="text-xs text-neutral-dark/70">€456.80 • {t('dashboardPreview.mobile.processed')} • 5 min</div>
-                          </div>
-                          <ArrowRight className="h-4 w-4 text-neutral-dark/50" />
-                        </div>
-                        <div className="flex items-center space-x-3 p-3 bg-accent/10 dark:bg-accent/20 rounded-lg">
-                          <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
-                            <AlertTriangle className="h-5 w-5 text-white" />
-                          </div>
-                          <div className="flex-1">
-                            <div className="text-sm font-medium text-neutral-dark dark:text-dark-text">{t('dashboardPreview.mobile.priceAlert')}</div>
-                            <div className="text-xs text-neutral-dark/70">Lácteos SA +15% • {t('dashboardPreview.mobile.now')}</div>
                           </div>
                           <ArrowRight className="h-4 w-4 text-neutral-dark/50" />
                         </div>
@@ -353,90 +343,52 @@ const DashboardPreview = () => {
                         </div>
                       </div>
 
-                      {/* Charts and Alerts */}
-                      <div className="grid lg:grid-cols-3 gap-6">
-                        <div className="lg:col-span-2 bg-neutral-light dark:bg-dark-bg/70 p-6 rounded-xl">
-                          <div className="flex items-center justify-between mb-4">
-                            <h5 className="text-lg font-semibold text-neutral-dark dark:text-dark-text">
-                              {t('dashboardPreview.desktop.charts.costTrends')}
-                            </h5>
-                            <div className="flex space-x-2">
-                              <button className="text-sm text-neutral-dark/70 hover:text-neutral-dark">7D</button>
-                              <button className="text-sm bg-primary text-white px-2 py-1 rounded">30D</button>
-                              <button className="text-sm text-neutral-dark/70 hover:text-neutral-dark">90D</button>
-                            </div>
-                          </div>
-                          <div className="h-48 bg-neutral-light dark:bg-dark-bg/60 rounded-lg flex items-end justify-around p-4">
-                            {[40, 65, 45, 80, 55, 70, 85, 60, 75, 90, 65, 80].map((height, index) => (
-                              <div key={index} className="flex flex-col items-center space-y-1">
-                                <div
-                                  className="bg-gradient-to-t from-primary to-primary/80 rounded-t w-6"
-                                  style={{ height: `${height}%` }}
-                                ></div>
-                                <span className="text-xs text-neutral-dark/70">{index + 1}</span>
-                              </div>
-                            ))}
+                      {/* Charts y Cost Trends a todo el ancho */}
+                      <div className="w-full bg-neutral-light dark:bg-dark-bg/70 p-6 rounded-xl mb-8">
+                        <div className="flex items-center justify-between mb-4">
+                          <h5 className="text-lg font-semibold text-neutral-dark dark:text-dark-text">
+                            {t('dashboardPreview.desktop.charts.costTrends')}
+                          </h5>
+                          <div className="flex space-x-2">
+                            <button className="text-sm text-neutral-dark/70 hover:text-neutral-dark">7D</button>
+                            <button className="text-sm bg-primary text-white px-2 py-1 rounded">30D</button>
+                            <button className="text-sm text-neutral-dark/70 hover:text-neutral-dark">90D</button>
                           </div>
                         </div>
-
-                        <div className="bg-neutral-light dark:bg-dark-bg/70 p-6 rounded-xl">
-                          <h5 className="text-lg font-semibold text-neutral-dark dark:text-dark-text mb-4">
-                            {t('dashboardPreview.desktop.alerts.title')}
-                          </h5>
-                          <div className="space-y-3">
-                            <div className="flex items-start space-x-3 p-3 bg-accent/10 dark:bg-accent/20 rounded-lg">
-                              <AlertTriangle className="h-5 w-5 text-accent mt-0.5" />
-                              <div className="flex-1">
-                                <p className="text-sm font-medium text-neutral-dark dark:text-dark-text">
-                                  {t('dashboardPreview.desktop.alerts.priceIncrease')}
-                                </p>
-                                <p className="text-neutral-dark/70 dark:text-dark-text/70">Lácteos SA +15% • Hace 2h</p>
-                              </div>
+                        <div className="h-56 bg-neutral-light dark:bg-dark-bg/60 rounded-lg flex items-end justify-around p-4 w-full">
+                          {[70, 80, 90, 60, 75, 85, 95, 80, 70, 60, 85, 95, 80, 70, 60, 50, 60, 70, 80, 90, 100, 90, 80, 70, 60, 50, 60, 70, 80, 90].map((height, index) => (
+                            <div key={index} className="flex flex-col items-center space-y-1">
+                              <div
+                                className="bg-accent border border-black rounded-t w-5"
+                                style={{ height: `${height * 2}px` }}
+                              ></div>
+                              <span className="text-xs text-white">{index + 1}</span>
                             </div>
-
-                            <div className="flex items-start space-x-3 p-3 bg-primary/10 dark:bg-primary/20 rounded-lg">
-                              <TrendingUp className="h-5 w-5 text-primary mt-0.5" />
-                              <div className="flex-1">
-                                <p className="text-sm font-medium text-neutral-dark dark:text-dark-text">
-                                  {t('dashboardPreview.desktop.alerts.savings')}
-                                </p>
-                                <p className="text-neutral-dark/70 dark:text-dark-text/70">Proveedor alternativo -20%</p>
-                                <p className="text-neutral-dark/70 dark:text-dark-text/70">{t('dashboardPreview.desktop.footer.altProvider')}</p>
-                              </div>
-                            </div>
-
-                            <div className="flex items-start space-x-3 p-3 bg-primary/10 dark:bg-primary/20 rounded-lg">
-                              <Target className="h-5 w-5 text-primary mt-0.5" />
-                              <div className="flex-1">
-                                <p className="text-sm font-medium text-neutral-dark dark:text-dark-text">
-                                  {t('dashboardPreview.desktop.footer.goalReached')}
-                                </p>
-                                <p className="text-neutral-dark/70 dark:text-dark-text/70">Reducción 30% conseguida</p>
-                                <p className="text-neutral-dark/70 dark:text-dark-text/70">{t('dashboardPreview.desktop.footer.goalDesc')}</p>
-                              </div>
-                            </div>
-                          </div>
+                          ))}
                         </div>
                       </div>
+
+
                     </>
                   )}
 
                   {activeTab === 'invoices' && (
                     <div className="space-y-6">
                       <div className="flex items-center justify-between">
-                        <h4 className="text-2xl font-bold text-neutral-dark dark:text-dark-text">Gestión de Facturas</h4>
+
+                        <h4 className="text-2xl font-bold text-neutral-dark dark:text-dark-text">{t('dashboardPreview.desktop.invoiceManagement')}</h4>
                         <div className="flex space-x-3">
                           <div className="relative">
                             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-neutral-dark/50" />
                             <input
                               type="text"
-                              placeholder="Buscar facturas..."
+                              placeholder={t('dashboardPreview.desktop.searchPlaceholder')}
                               className="pl-10 pr-4 py-2 border border-neutral-dark/30 dark:border-dark-text/30 rounded-lg bg-neutral-light dark:bg-dark-bg/70 text-neutral-dark dark:text-dark-text"
                             />
                           </div>
                           <button className="flex items-center space-x-2 px-4 py-2 border border-neutral-dark/30 dark:border-dark-text/30 rounded-lg text-neutral-dark/70 dark:text-dark-text/70">
                             <Filter className="h-4 w-4" />
-                            <span>Filtros</span>
+                            <span>{t('dashboardPreview.desktop.filters')}</span>
                           </button>
                         </div>
                       </div>
@@ -506,24 +458,16 @@ const DashboardPreview = () => {
                       <div className="grid lg:grid-cols-2 gap-6">
                         <div className="bg-neutral-light dark:bg-dark-bg/70 p-6 rounded-lg">
                           <h5 className="text-lg font-semibold text-neutral-dark dark:text-dark-text mb-4">{t('dashboardPreview.desktop.charts.costTrends')}</h5>
-                          <div className="relative h-64 flex items-center justify-center">
-                            <div className="relative w-48 h-48">
-                              <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
-                                <circle cx="50" cy="50" r="40" fill="none" stroke="#e5e7eb" strokeWidth="8"/>
-                                <circle cx="50" cy="50" r="40" fill="none" stroke="primary" strokeWidth="8"
-                                        strokeDasharray="75 25" strokeLinecap="round"/>
-                                <circle cx="50" cy="50" r="40" fill="none" stroke="accent" strokeWidth="8"
-                                        strokeDasharray="50 50" strokeDashoffset="-75" strokeLinecap="round"/>
-                                <circle cx="50" cy="50" r="40" fill="none" stroke="primary/50" strokeWidth="8"
-                                        strokeDasharray="25 75" strokeDashoffset="-125" strokeLinecap="round"/>
-                              </svg>
-                              <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="text-center">
-                                  <div className="text-2xl font-bold text-neutral-dark dark:text-dark-text">€3,240</div>
-                                  <div className="text-neutral-dark/70 text-sm">{t('dashboardPreview.desktop.footer.monthlyTotal')}</div>
-                                </div>
+                          <div className="h-64 flex items-end justify-around p-4 w-full">
+                            {[30, 45, 60, 55, 70, 80, 65, 90, 75, 60, 85, 95, 80, 70, 60, 50, 40, 55, 65, 75, 85, 95, 80, 70, 60, 50, 40, 55, 65, 75].map((height, index) => (
+                              <div key={index} className="flex flex-col items-center space-y-1">
+                                <div
+                                  className="bg-gradient-to-t from-primary to-primary/80 rounded-t w-4"
+                                  style={{ height: `${height}%` }}
+                                ></div>
+                                <span className="text-xs text-neutral-dark/70">{index + 1}</span>
                               </div>
-                            </div>
+                            ))}
                           </div>
                           <div className="space-y-2 mt-4">
                             <div className="flex items-center justify-between">
@@ -646,77 +590,7 @@ const DashboardPreview = () => {
                   )}
 
                   {activeTab === 'alerts' && (
-                    <div className="space-y-6">
-                      <h4 className="text-2xl font-bold text-neutral-dark dark:text-dark-text">Centro de Alertas</h4>
-
-                      <div className="grid md:grid-cols-3 gap-6 mb-8">
-                        <div className="bg-accent/10 dark:bg-accent/20 p-6 rounded-lg">
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <p className="text-accent text-sm font-medium">Alertas Críticas</p>
-                              <p className="text-3xl font-bold text-accent dark:text-accent">3</p>
-                            </div>
-                            <AlertTriangle className="h-8 w-8 text-accent" />
-                          </div>
-                        </div>
-
-                        <div className="bg-primary/10 dark:bg-primary/20 p-6 rounded-lg">
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <p className="text-primary text-sm font-medium">Advertencias</p>
-                              <p className="text-3xl font-bold text-primary dark:text-primary">7</p>
-                            </div>
-                            <Bell className="h-8 w-8 text-primary" />
-                          </div>
-                        </div>
-
-                        <div className="bg-primary/10 dark:bg-primary/20 p-6 rounded-lg">
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <p className="text-primary text-sm font-medium">Oportunidades</p>
-                              <p className="text-3xl font-bold text-primary dark:text-primary">12</p>
-                            </div>
-                            <TrendingUp className="h-8 w-8 text-primary" />
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="space-y-4">
-                        {[
-                          { type: 'critical', icon: AlertTriangle, title: 'Aumento significativo de precios', description: 'Lácteos SA ha aumentado sus precios un 15% en la última semana', time: 'Hace 2 horas', action: 'Buscar alternativas' },
-                          { type: 'critical', icon: XCircle, title: 'Proveedor no disponible', description: 'Carnes Premium no ha entregado el pedido programado para hoy', time: 'Hace 4 horas', action: 'Contactar proveedor' },
-                          { type: 'warning', icon: Bell, title: 'Stock bajo detectado', description: 'El consumo de aceite de oliva está por encima de lo normal', time: 'Hace 6 horas', action: 'Revisar inventario' },
-                          { type: 'opportunity', icon: TrendingUp, title: 'Nuevo proveedor disponible', description: 'Verduras Ecológicas ofrece precios 20% más bajos', time: 'Hace 1 día', action: 'Evaluar proveedor' },
-                          { type: 'opportunity', icon: DollarSign, title: 'Descuento por volumen', description: 'Proveedor ABC ofrece 10% descuento por pedidos >€500', time: 'Hace 2 días', action: 'Aprovechar oferta' }
-                        ].map((alert, index) => (
-                          <div key={index} className={`p-4 rounded-lg border-l-4 ${
-                            alert.type === 'critical' ? 'bg-accent/10 dark:bg-accent/20 border-accent' :
-                            alert.type === 'warning' ? 'bg-primary/10 dark:bg-primary/20 border-primary' :
-                            'bg-primary/10 dark:bg-primary/20 border-primary'
-                          }`}>
-                            <div className="flex items-start space-x-4">
-                              <alert.icon className={`h-6 w-6 mt-1 ${
-                                alert.type === 'critical' ? 'text-accent' :
-                                alert.type === 'warning' ? 'text-primary' :
-                                'text-primary'
-                              }`} />
-                              <div className="flex-1">
-                                <h5 className="font-semibold text-neutral-dark dark:text-dark-text">{alert.title}</h5>
-                                <p className="text-neutral-dark/70 dark:text-dark-text/70 mt-1">{alert.description}</p>
-                                <p className="text-sm text-neutral-dark/70 mt-2">{alert.time}</p>
-                              </div>
-                              <button className={`px-4 py-2 rounded-lg text-sm font-medium ${
-                                alert.type === 'critical' ? 'bg-accent text-white hover:bg-accent/80' :
-                                alert.type === 'warning' ? 'bg-primary text-white hover:bg-primary/80' :
-                                'bg-primary text-white hover:bg-primary/80'
-                              }`}>
-                                {alert.action}
-                              </button>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
+                    <></>
                   )}
                 </div>
               </div>
@@ -724,18 +598,7 @@ const DashboardPreview = () => {
           </div>
         </div>
 
-        {/* Features Highlight */}
-        <div className="bg-gradient-to-r from-primary to-primary/80 rounded-xl p-8 text-white text-center">
-          <h3 className="text-2xl font-bold mb-4">
-            {t('dashboardPreview.cta.title')}
-          </h3>
-          <p className="text-lg mb-6 opacity-90">
-            {t('dashboardPreview.cta.subtitle')}
-          </p>
-          <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-neutral-light transition-colors">
-            {t('dashboardPreview.cta.button')}
-          </button>
-        </div>
+
       </div>
     </section>
   );

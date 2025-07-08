@@ -1,21 +1,22 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Mail, ArrowRight, Check } from 'lucide-react';
+import { Mail, ArrowRight } from 'lucide-react';
 
 interface EmailFormProps {
   placeholder?: string;
   buttonText?: string;
   onSubmit: (email: string) => void;
+  onSuccess?: () => void; // New prop for success callback
 }
 
-const EmailForm: React.FC<EmailFormProps> = ({ 
-  placeholder, 
-  buttonText, 
-  onSubmit 
+const EmailForm: React.FC<EmailFormProps> = ({
+  placeholder,
+  buttonText,
+  onSubmit,
+  onSuccess
 }) => {
   const { t } = useTranslation();
   const [email, setEmail] = useState('');
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   const defaultPlaceholder = placeholder || t('emailForm.placeholder');
@@ -23,35 +24,41 @@ const EmailForm: React.FC<EmailFormProps> = ({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!email || !email.includes('@')) {
       return;
     }
-    
-    setIsLoading(true);
-    
-    // Simular envío
-    setTimeout(() => {
-      setIsLoading(false);
-      setIsSubmitted(true);
-      onSubmit(email);
-      
-      // Reset después de 3 segundos
-      setTimeout(() => {
-        setIsSubmitted(false);
-        setEmail('');
-      }, 3000);
-    }, 1000);
-  };
 
-  if (isSubmitted) {
-    return (
-      <div className="flex items-center justify-center bg-green-50 dark:bg-green-900/30 border border-green-200 dark:border-green-800 rounded-lg p-4">
-        <Check className="h-5 w-5 text-green-600 mr-2" />
-        <span className="text-green-800 dark:text-green-400 font-medium">{t('emailForm.success')}</span>
-      </div>
-    );
-  }
+    setIsLoading(true);
+
+    try {
+      const response = await fetch('https://sheetdb.io/api/v1/bspksrzbyq58z', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ data: { email: email } }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Error al enviar el email: ${response.statusText}`);
+      }
+
+      const result = await response.json();
+      console.log('Email enviado con éxito:', result);
+
+      onSubmit(email);
+      if (onSuccess) {
+        onSuccess();
+      }
+      setEmail('');
+    } catch (error) {
+      console.error('Error al enviar el email:', error);
+      // Aquí podrías añadir un estado de error para mostrar un mensaje al usuario
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
@@ -66,7 +73,7 @@ const EmailForm: React.FC<EmailFormProps> = ({
           required
         />
       </div>
-      
+
       <button
         type="submit"
         disabled={isLoading || !email}

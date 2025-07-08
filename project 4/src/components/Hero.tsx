@@ -1,10 +1,15 @@
 
 import { useTranslation } from 'react-i18next';
 import { Clock, TrendingDown } from 'lucide-react';
-import EmailForm from './EmailForm';
+import { scrollToElement } from '../utils/scrollUtils';
 
 const Hero = () => {
   const { t } = useTranslation();
+
+  const handleScrollToForm = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    event.preventDefault();
+    scrollToElement('email-form-section');
+  };
 
   return (
     <section className="relative bg-gradient-to-br from-primary/5 via-neutral-light to-primary/5 dark:from-dark-bg dark:via-dark-bg/90 dark:to-dark-bg py-20 transition-colors overflow-hidden">
@@ -38,28 +43,13 @@ const Hero = () => {
             {t('hero.subtitle')}
           </p>
 
-          {/* Enhanced CTA Form */}
-          <div className="bg-white/95 dark:bg-dark-bg/95 backdrop-blur-sm rounded-2xl shadow-2xl p-8 max-w-md mx-auto border border-white/50 relative">
+          <button
+            onClick={handleScrollToForm}
+            className="bg-primary text-white px-8 py-4 rounded-xl hover:bg-primary/80 transition-colors text-lg font-semibold shadow-lg transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-primary/50"
+          >
+            {t('hero.buttonText')}
+          </button>
 
-            <h3 className="text-lg font-semibold text-neutral-dark dark:text-dark-text mb-4">
-              {t('hero.formTitle')}
-            </h3>
-            <EmailForm
-              placeholder={t('hero.placeholder')}
-              buttonText={t('hero.buttonText')}
-              onSubmit={(email) => {
-                console.log('Email submitted:', email);
-                // Aquí iría la lógica de envío
-              }}
-            />
-            <div className="mt-4 flex items-center justify-center space-x-4 text-sm text-neutral-dark dark:text-dark-text">
-              <span className="flex items-center">
-                <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
-                {t('hero.freeAccess')}
-              </span>
-            </div>
-
-          </div>
         </div>
       </div>
     </section>

@@ -1,13 +1,30 @@
 
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Rocket, Crown } from 'lucide-react';
 import EmailForm from './EmailForm';
+import ThankYouModal from './ThankYouModal';
 
 const FinalCTA = () => {
   const { t } = useTranslation();
+  const [showThankYouModal, setShowThankYouModal] = useState(false);
+
+  const handleEmailSubmit = (email: string) => {
+    console.log('Email submitted:', email);
+    // Aquí iría la lógica de envío real a Google Sheets
+    // Por ahora, solo mostramos el modal
+  };
+
+  const handleSuccess = () => {
+    setShowThankYouModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowThankYouModal(false);
+  };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-dark-bg via-dark-bg/90 to-dark-bg dark:from-dark-bg dark:via-dark-bg/90 dark:to-dark-bg text-white transition-colors relative overflow-hidden">
+    <section id="email-form-section" className="py-20 bg-gradient-to-br from-dark-bg via-dark-bg/90 to-dark-bg dark:from-dark-bg dark:via-dark-bg/90 dark:to-dark-bg text-white transition-colors relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/20 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
@@ -42,20 +59,13 @@ const FinalCTA = () => {
           <EmailForm
             placeholder={t('finalCta.placeholder')}
             buttonText={t('finalCta.buttonText')}
-            onSubmit={(email) => {
-              console.log('Email submitted:', email);
-              // Aquí iría la lógica de envío
-            }}
+            onSubmit={handleEmailSubmit}
+            onSuccess={handleSuccess}
           />
-          <div className="mt-4 text-center">
-            <div className="bg-primary/10 dark:bg-primary/20 rounded-lg p-3">
-              <p className="text-sm text-primary dark:text-primary font-medium">
-                {t('finalCta.guarantees')}
-              </p>
-            </div>
-          </div>
+          
         </div>
       </div>
+      <ThankYouModal isOpen={showThankYouModal} onClose={handleCloseModal} />
     </section>
   );
 };

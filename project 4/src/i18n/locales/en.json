@@ -83,7 +83,7 @@
       "privacy": "Privacy Policy",
       "terms": "Terms of Service"
     },
-    "copyright": "© 2024 FacturaGourmet. All rights reserved.",
+    "copyright": "© FacturaGourmet. All rights reserved.",
     "madeWith": "Made with ❤️ for restaurants that want to grow."
   },
   "emailForm": {
@@ -168,7 +168,10 @@
         "processed": "Processed",
         "processing": "Processing",
         "error": "Error"
-      }
+      },
+      "invoiceManagement": "Invoice Management",
+      "searchPlaceholder": "Search invoices...",
+      "filters": "Filters"
     },
     "cta": {
       "title": "Ready to revolutionize your management?",

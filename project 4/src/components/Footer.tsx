@@ -1,6 +1,6 @@
-import React from 'react';
+
 import { useTranslation } from 'react-i18next';
-import { ChefHat, TrendingUp, Mail, Phone, MapPin } from 'lucide-react';
+import { ChefHat, TrendingUp } from 'lucide-react';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -21,19 +21,8 @@ const Footer = () => {
             <p className="text-dark-text/70 mb-4">
               {t('footer.description')}
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-dark-text/70 hover:text-primary transition-colors">
-                <Mail className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-dark-text/70 hover:text-primary transition-colors">
-                <Phone className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-dark-text/70 hover:text-primary transition-colors">
-                <MapPin className="h-5 w-5" />
-              </a>
-            </div>
           </div>
-          
+
           {/* Legal Links */}
           <div className="md:col-span-2">
             <h4 className="text-lg font-semibold mb-4">{t('footer.legal')}</h4>
@@ -43,10 +32,10 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        
+
         <div className="border-t border-dark-text/10 dark:border-dark-text/10 mt-8 pt-8 text-center">
           <p className="text-dark-text/70">
-            {t('footer.copyright')}
+            © {new Date().getFullYear()} FacturaGourmet. {t('footer.copyright')}
             <span className="ml-2">{t('footer.madeWith')}</span>
           </p>
         </div>
