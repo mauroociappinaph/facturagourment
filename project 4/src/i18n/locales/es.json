@@ -1,0 +1,179 @@
+{
+  "nav": {
+    "problem": "El Problema",
+    "solution": "Solución",
+    "howItWorks": "Cómo Funciona"
+  },
+  "hero": {
+    "badge1": "75% menos tiempo",
+    "badge2": "40% ahorro en costos",
+    "title": "Reduce un <span class=\"text-teal-600\">75%</span> el tiempo que dedicas a facturas.<br />Ahorra hasta un <span class=\"text-orange-500\">40%</span> en costos operativos.",
+    "subtitle": "La solución de IA para restaurantes y bares que transforma tus facturas en ahorro. Deja de teclear y empieza a controlar tus márgenes en tiempo real. Probado por la industria.",
+    "formTitle": "Únete a la lista de espera",
+    "placeholder": "tu@restaurante.com",
+    "buttonText": "Quiero Ahorrar Tiempo y Dinero",
+    "freeAccess": "✓ Acceso gratuito"
+  },
+  "problem": {
+    "title": "Cada hora que pasas gestionando facturas, es dinero que tu restaurante pierde.",
+    "critical": "PROBLEMA CRÍTICO EN TU RESTAURANTE",
+    "summary": {
+      "title": "El proceso manual te cuesta entre 15 y 25 horas al mes",
+      "description": "Es tiempo que no dedicas a tus clientes, a tu equipo o a hacer crecer tu negocio. Es un costo oculto que frena tu rentabilidad y te impide escalar.",
+      "averageLoss": "Pérdida mensual promedio"
+    }
+  },
+  "solution": {
+    "title": "Tu nuevo gerente financiero es una IA",
+    "subtitle": "Transforma la gestión de facturas de tu restaurante con inteligencia artificial. Automatiza, optimiza y toma decisiones basadas en datos reales.",
+    "benefits": {
+      "active": "ACTIVO",
+      "time": {
+        "title": "Recupera tu Tiempo",
+        "description": "Automatiza la extracción de datos de cada factura con solo una foto. Reduce el trabajo administrativo de 20 horas mensuales a menos de 5.",
+        "demo": "📸 Foto → ⚡ 3 segundos → ✅ Datos extraídos"
+      },
+      "margins": {
+        "title": "Protege tus Márgenes",
+        "description": "Recibe alertas automáticas cuando un proveedor aumenta sus precios. Negocia con datos y evita que los costos erosionen tus ganancias.",
+        "demo": "🚨 Alerta: Lácteos SA +15% → 💡 Proveedor alternativo -20%"
+      },
+      "decisions": {
+        "title": "Toma Decisiones Rentables",
+        "description": "Nuestro Dashboard de Cero Clics te muestra al instante el costo real de tus platos y la rentabilidad por producto. Por ejemplo, sabrás si tus costos de lácteos subieron un 8% esta semana. Conoce tus Top 5 proveedores y productos con mayor gasto. Optimiza tu menú basándote en datos, no en intuición. Descarga reportes en Excel/CSV para tu contador o para análisis detallados.",
+        "demo": "🍝 Pasta Carbonara: Costo €4.20 → Margen 70% → ⭐ Top rentable"
+      },
+      "notifications": {
+        "title": "Mantente Informado",
+        "description": "Recibe notificaciones cuando tu resumen de gastos esté listo o una factura haya sido procesada, además de las alertas de precios."
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "Tan fácil como sacarle una foto a la factura",
+    "subtitle": "Tres pasos simples para transformar completamente la gestión financiera de tu restaurante",
+    "steps": {
+      "capture": {
+        "title": "Captura",
+        "description": "Sube un PDF o saca una foto de cualquier factura o albarán, sin teclear datos."
+      },
+      "process": {
+        "title": "Procesa",
+        "description": "Nuestra IA lee, entiende y categoriza cada línea de producto en segundos, y te muestra de dónde sacó cada dato para tu total tranquilidad."
+      },
+      "control": {
+        "title": "Controla",
+        "description": "Accede a tu dashboard y visualiza la información que necesitas para maximizar tu rentabilidad."
+      }
+    }
+  },
+  "finalCta": {
+    "title": "La digitalización ya no es una opción. Es la clave para competir y crecer.",
+    "subtitle": "Únete a los miles de restaurantes que ya usan la automatización para ser más eficientes y rentables. Deja de perder dinero y empieza a invertir en inteligencia.",
+    "formTitle": "Únete a la lista de espera",
+    "placeholder": "tu@restaurante.com",
+    "buttonText": "Unirme a la revolución"
+    },
+  "footer": {
+    "description": "Automatización inteligente para restaurantes modernos. Transforma tu gestión financiera con IA.",
+    "product": "Producto",
+    "support": "Soporte",
+    "legal": "Legal",
+    "links": {
+      "privacy": "Política de Privacidad",
+      "terms": "Términos de Servicio"
+    },
+    "copyright": "© 2024 FacturaGourmet. Todos los derechos reservados.",
+    "madeWith": "Hecho con ❤️ para restaurantes que quieren crecer."
+  },
+  "emailForm": {
+    "success": "¡Gracias! Te contactaremos pronto.",
+    "placeholder": "tu@email.com",
+    "button": "Enviar"
+  },
+  "dashboardPreview": {
+    "title": "Así se ve tu nueva gestión financiera",
+    "subtitle": "Descubre cómo FacturaGourmet transforma la administración de tu restaurante con dashboards intuitivos y análisis en tiempo real.",
+    "tabs": {
+      "invoices": "Facturas",
+      "analytics": "Análisis"
+    },
+    "mobile": {
+      "title": "Gestión móvil instantánea",
+      "feature1": "Captura facturas con la cámara",
+      "feature2": "Procesamiento en segundos",
+      "feature3": "Análisis inmediato de costos",
+      "feature4": "Alertas inteligentes en tiempo real",
+      "stats": {
+        "saved": "Tiempo ahorrado",
+        "costs": "Reducción costos",
+        "total": "Ahorro total",
+        "thisMonth": "Este mes",
+        "vsLastMonth": "vs mes anterior"
+      },
+      "recent": "Actividad reciente",
+      "seeAll": "Ver todo",
+      "invoiceButton": "Factura",
+      "provider1": "Proveedor ABC",
+      "provider2": "Carnes Premium",
+      "priceAlert": "Alerta de precio",
+      "processed": "Procesada",
+      "now": "Ahora",
+      "captureInvoice": "Capturar Factura",
+      "invoiceDemo": "FACTURA #001234",
+      "supplierDemo": "Proveedor ABC S.L.",
+      "item1": "Tomates 5kg",
+      "item2": "Cebolla 3kg",
+      "item3": "Aceite 1L",
+      "total": "TOTAL",
+      "aiDetecting": "IA detectando..."
+    },
+    "desktop": {
+      "title": "Dashboard completo para decisiones inteligentes",
+      "welcome": "Bienvenido, Chef",
+      "subtitle": "Aquí tienes el resumen de tu restaurante hoy",
+      "upload": "Subir Factura",
+      "stats": {
+        "timeSaved": "Tiempo ahorrado este mes",
+        "costReduction": "Reducción de costos",
+        "invoicesProcessed": "Facturas procesadas",
+        "savings": "Ahorro total"
+      },
+      "charts": {
+        "costTrends": "Tendencias de costos por categoría"
+      },
+      "alerts": {
+        "title": "Alertas inteligentes",
+        "priceIncrease": "Aumento de precios detectado",
+        "savings": "Nuevo ahorro identificado",
+        "thisMonth": "Este mes"
+      },
+      "footer": {
+        "altProvider": "Proveedor alternativo -20%",
+        "goalReached": "Meta alcanzada",
+        "goalDesc": "Reducción 30% conseguida",
+        "monthlyTotal": "Total mensual",
+        "meat": "Carnes",
+        "veggies": "Verduras",
+        "dairy": "Lácteos",
+        "cost": "Costo",
+        "price": "Precio",
+        "margin": "margen",
+        "dish1": "Paella Valenciana",
+        "dish2": "Salmón Grillado",
+        "dish3": "Pasta Carbonara",
+        "dish4": "Entrecot Premium"
+      },
+      "status": {
+        "processed": "Procesada",
+        "processing": "Procesando",
+        "error": "Error"
+      }
+    },
+    "cta": {
+      "title": "¿Listo para revolucionar tu gestión?",
+      "subtitle": "Únete a los cientos de restaurantes que ya optimizan sus costos con IA",
+      "button": "Únete a la lista de espera"
+    }
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "nav": {
+    "problem": "The Problem",
+    "solution": "Solution",
+    "howItWorks": "How It Works"
+  },
+  "hero": {
+    "badge1": "75% less time",
+    "badge2": "40% cost savings",
+    "title": "Reduce <span class=\"text-teal-600\">75%</span> of the time you spend on invoices.<br />Save up to <span class=\"text-orange-500\">40%</span> in operational costs.",
+    "subtitle": "The AI solution for restaurants and bars that transforms your invoices into savings. Stop typing and start controlling your margins in real time. Industry proven.",
+    "formTitle": "Join the waitlist",
+    "placeholder": "your@restaurant.com",
+    "buttonText": "I Want to Save Time and Money",
+    "freeAccess": "✓ Free access"
+  },
+  "problem": {
+    "title": "Every hour you spend managing invoices is money your restaurant loses.",
+    "critical": "CRITICAL PROBLEM IN YOUR RESTAURANT",
+    "summary": {
+      "title": "The manual process costs you between 15 and 25 hours per month",
+      "description": "It's time you don't dedicate to your customers, your team, or growing your business. It's a hidden cost that slows your profitability and prevents you from scaling.",
+      "averageLoss": "Average monthly loss"
+    }
+  },
+  "solution": {
+    "title": "Your new financial manager is an AI",
+    "subtitle": "Transform your restaurant's invoice management with artificial intelligence. Automate, optimize and make decisions based on real data.",
+    "benefits": {
+      "active": "ACTIVE",
+      "time": {
+        "title": "Recover Your Time",
+        "description": "Automate data extraction from every invoice with just a photo. Reduce administrative work from 20 monthly hours to less than 5.",
+        "demo": "📸 Photo → ⚡ 3 seconds → ✅ Data extracted"
+      },
+      "margins": {
+        "title": "Protect Your Margins",
+        "description": "Receive automatic alerts when a supplier increases their prices. Negotiate with data and prevent costs from eroding your profits.",
+        "demo": "🚨 Alert: Dairy SA +15% → 💡 Alternative supplier -20%"
+      },
+      "decisions": {
+        "title": "Make Profitable Decisions",
+        "description": "Our Zero-Click Dashboard instantly shows you the real cost of your dishes and profitability per product. For example, you'll know if your dairy costs went up 8% this week. Know your Top 5 suppliers and products with the highest spending. Optimize your menu based on data, not intuition. Download reports in Excel/CSV for your accountant or for detailed analysis.",
+        "demo": "🍝 Carbonara Pasta: Cost €4.20 → Margin 70% → ⭐ Top profitable"
+      },
+      "notifications": {
+        "title": "Stay Informed",
+        "description": "Receive notifications when your expense summary is ready or an invoice has been processed, in addition to price alerts."
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "As easy as taking a photo of the invoice",
+    "subtitle": "Three simple steps to completely transform your restaurant's financial management",
+    "steps": {
+      "capture": {
+        "title": "Capture",
+        "description": "Upload a PDF or take a photo of any invoice or delivery note, without manual data entry."
+      },
+      "process": {
+        "title": "Process",
+        "description": "Our AI reads, understands and categorizes each product line in seconds, and shows you where each piece of data was extracted from for your complete peace of mind."
+      },
+      "control": {
+        "title": "Control",
+        "description": "Access your dashboard and visualize the information you need to maximize your profitability."
+      }
+    }
+  },
+  "finalCta": {
+    "title": "Digitalization is no longer an option. It's the key to compete and grow.",
+    "subtitle": "Join the thousands of restaurants already using automation to be more efficient and profitable. Stop losing money and start investing in intelligence.",
+    "formTitle": "Join the waitlist",
+    "placeholder": "your@restaurant.com",
+    "buttonText": "Join the revolution"
+    },
+  "footer": {
+    "description": "Intelligent automation for modern restaurants. Transform your financial management with AI.",
+    "product": "Product",
+    "support": "Support",
+    "legal": "Legal",
+    "links": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    },
+    "copyright": "© 2024 FacturaGourmet. All rights reserved.",
+    "madeWith": "Made with ❤️ for restaurants that want to grow."
+  },
+  "emailForm": {
+    "success": "Thank you! We'll contact you soon.",
+    "placeholder": "your@email.com",
+    "button": "Send"
+  },
+  "dashboardPreview": {
+    "title": "This is what your new financial management looks like",
+    "subtitle": "Discover how FacturaGourmet transforms your restaurant administration with intuitive dashboards and real-time analytics.",
+    "tabs": {
+      "invoices": "Invoices",
+      "analytics": "Analytics"
+    },
+    "mobile": {
+      "title": "Instant mobile management",
+      "feature1": "Capture invoices with camera",
+      "feature2": "Processing in seconds",
+      "feature3": "Immediate cost analysis",
+      "feature4": "Smart real-time alerts",
+      "stats": {
+        "saved": "Time saved",
+        "costs": "Cost reduction",
+        "total": "Total savings",
+        "thisMonth": "This month",
+        "vsLastMonth": "vs last month"
+      },
+      "recent": "Recent activity",
+      "seeAll": "See all",
+      "invoiceButton": "Invoice",
+      "provider1": "Provider ABC",
+      "provider2": "Premium Meats",
+      "priceAlert": "Price alert",
+      "processed": "Processed",
+      "now": "Now",
+      "captureInvoice": "Capture Invoice",
+      "invoiceDemo": "INVOICE #001234",
+      "supplierDemo": "Provider ABC Ltd.",
+      "item1": "Tomatoes 5kg",
+      "item2": "Onion 3kg",
+      "item3": "Oil 1L",
+      "total": "TOTAL",
+      "aiDetecting": "AI detecting..."
+    },
+    "desktop": {
+      "title": "Complete dashboard for smart decisions",
+      "welcome": "Welcome, Chef",
+      "subtitle": "Here's your restaurant summary for today",
+      "upload": "Upload Invoice",
+      "stats": {
+        "timeSaved": "Time saved this month",
+        "costReduction": "Cost reduction",
+        "invoicesProcessed": "Invoices processed",
+        "savings": "Total savings"
+      },
+      "charts": {
+        "costTrends": "Cost trends by category"
+      },
+      "alerts": {
+        "title": "Smart alerts",
+        "priceIncrease": "Price increase detected",
+        "savings": "New savings identified",
+        "thisMonth": "This month"
+      },
+      "footer": {
+        "altProvider": "Alternative provider -20%",
+        "goalReached": "Goal reached",
+        "goalDesc": "30% reduction achieved",
+        "monthlyTotal": "Monthly total",
+        "meat": "Meats",
+        "veggies": "Vegetables",
+        "dairy": "Dairy",
+        "cost": "Cost",
+        "price": "Price",
+        "margin": "margin",
+        "dish1": "Valencian Paella",
+        "dish2": "Grilled Salmon",
+        "dish3": "Carbonara Pasta",
+        "dish4": "Premium Ribeye"
+      },
+      "status": {
+        "processed": "Processed",
+        "processing": "Processing",
+        "error": "Error"
+      }
+    },
+    "cta": {
+      "title": "Ready to revolutionize your management?",
+      "subtitle": "Join the hundreds of restaurants already optimizing their costs with AI",
+      "button": "Join the waitlist"
+    }
+  }
+}
