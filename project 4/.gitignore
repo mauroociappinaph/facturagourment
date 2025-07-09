@@ -39,3 +39,4 @@ Thumbs.db
 
 # Bolt.new specific
 .bolt/
+../.DS_Store
