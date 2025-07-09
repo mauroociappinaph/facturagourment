@@ -93,6 +93,11 @@
     "placeholder": "tu@email.com",
     "button": "Enviar"
   },
+  "thankYouModal": {
+    "title": "¡Gracias por unirte!",
+    "message": "Pronto tendrás novedades de nosotros. ¡Mantente atento a tu bandeja de entrada!",
+    "closeButton": "Cerrar"
+  },
   "dashboardPreview": {
     "title": "Así se ve tu nueva gestión financiera",
     "subtitle": "Descubre cómo FacturaGourmet transforma la administración de tu restaurante con dashboards intuitivos y análisis en tiempo real.",

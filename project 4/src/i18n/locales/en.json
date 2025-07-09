@@ -91,6 +91,11 @@
     "placeholder": "your@email.com",
     "button": "Send"
   },
+  "thankYouModal": {
+    "title": "Thank You for Joining!",
+    "message": "You'll hear from us soon. Stay tuned to your inbox!",
+    "closeButton": "Close"
+  },
   "dashboardPreview": {
     "title": "This is what your new financial management looks like",
     "subtitle": "Discover how FacturaGourmet transforms your restaurant administration with intuitive dashboards and real-time analytics.",

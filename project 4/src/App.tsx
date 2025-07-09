@@ -8,6 +8,7 @@ import HowItWorks from './components/HowItWorks';
 import DashboardPreview from './components/DashboardPreview';
 import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <FinalCTA />
         <Footer />
       </div>
+       <Analytics />
     </ThemeProvider>
   );
 }
