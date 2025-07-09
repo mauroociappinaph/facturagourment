@@ -342,7 +342,6 @@ const DashboardPreview = () => {
                           </div>
                         </div>
                       </div>
-
                       {/* Charts y Cost Trends a todo el ancho */}
                       <div className="w-full bg-neutral-light dark:bg-dark-bg/70 p-6 rounded-xl mb-8">
                         <div className="flex items-center justify-between mb-4">
